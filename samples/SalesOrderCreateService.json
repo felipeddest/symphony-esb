@@ -1,0 +1,42 @@
+{
+  "name": "SalesOrder.Create",
+
+  "description": "Service to create a Sales Order on My-ERP",
+
+  "declarations": [{"logger": {"type": "Logger"}, "salesOrderCreateRequest": "Object"}],
+
+  "pipeline": {
+
+    "assign1": [{
+      "var": "logger.serviceName",
+      "value": "SalesOrderCreate"
+    },
+    {
+      "var": "logger.transactionId",
+      "value": "$env.currentTransactionId"
+    },
+    {
+      "var": "salesOrderCreateRequest",
+      "transformationFile": {"path": "./JQ/salesOrderCreateRequest.jq", "parameters": [{"salesOrder": "$req.body"}]}
+    }],
+
+    "invoke": {
+      "url": "http://my-erp/order",
+      "method": "POST",
+      "contentType": "application/json",
+      "body": "$salesOrderCreateRequest",
+      "outputVar": "orderResponse"
+    },
+
+    "assign2": [{
+      "var": "res.result.salesOrderNumber",
+      "value": "$orderResponse.number"
+    },
+    {
+      "var": "res.result.message",
+      "value": "Order created sucessfully, without warnings."
+    }]
+
+  }
+
+}
