@@ -1,6 +1,7 @@
 'use strict'
 
 import Hapi from 'hapi'
+import * as loader from '../api/services/loader'
 
 const server = new Hapi.Server()
 
@@ -18,10 +19,16 @@ server.register({
   if (err) throw err
 })
 
-server.start((err) => {
+server.start(async function (err) {
   if (err) {
+    console.log(err)
     throw err
   }
+  let services = await loader.loadServices()
+  services.forEach((service) => {
+    console.log(`Service: ${service.name} Description: ${service.description}`)
+  })
+  console.log('Services count:', services.length)
   console.log('Server running at:', server.info.uri)
 })
 

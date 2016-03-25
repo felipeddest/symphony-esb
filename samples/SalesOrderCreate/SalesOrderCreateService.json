@@ -1,10 +1,7 @@
 {
   "name": "SalesOrder.Create",
-
   "description": "Service to create a Sales Order on My-ERP",
-
   "declarations": [{"logger": {"type": "Logger"}, "salesOrderCreateRequest": "Object"}],
-
   "pipeline": {
 
     "assign1": [{
@@ -36,7 +33,5 @@
       "var": "res.result.message",
       "value": "Order created sucessfully, without warnings."
     }]
-
   }
-
 }

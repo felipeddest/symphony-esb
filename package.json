@@ -4,7 +4,7 @@
   "description": "A lightweight ESB (Enterprise Service Bus) implementation written in Node.js",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js",
+    "start": "NODE_PATH=. node index.js",
     "lint": "standard --verbose | snazzy",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -20,7 +20,8 @@
   "homepage": "https://github.com/felipeddest/symphony-esb#readme",
   "dependencies": {
     "hapi": "^13.2.1",
-    "hapi-router": "^3.4.1"
+    "hapi-router": "^3.4.1",
+    "node-dir": "^0.1.11"
   },
   "devDependencies": {
     "babel-plugin-transform-runtime": "^6.6.0",

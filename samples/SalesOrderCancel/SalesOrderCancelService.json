@@ -1,0 +1,6 @@
+{
+  "name": "SalesOrder.Cancel",
+  "description": "Service to cancel a Sales Order on My-ERP",
+  "declarations": [],
+  "pipeline": {}
+}
