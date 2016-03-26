@@ -21,6 +21,7 @@
   "dependencies": {
     "hapi": "^13.2.1",
     "hapi-router": "^3.4.1",
+    "lodash": "^4.6.1",
     "node-dir": "^0.1.11"
   },
   "devDependencies": {

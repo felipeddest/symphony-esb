@@ -2,6 +2,7 @@
   "name": "SalesOrder.Create",
   "description": "Service to create a Sales Order on My-ERP",
   "declarations": [{"logger": {"type": "Logger"}, "salesOrderCreateRequest": "Object"}],
+  "path": "/salesOrder",
   "pipeline": {
 
     "assign1": [{
