@@ -10,8 +10,17 @@ function createPipeline (pipeline) {
   let steps = prepareSteps(pipeline)
 
   return async function (request, reply) {
-    for(let step in steps) {
-      await steps[step](request, reply)
+    let variables = {}
+    pipeline.declarations.forEach((declaration) => {
+      variables[declaration] = {}
+    })
+    let context = {
+      variables: variables,
+      req: request,
+      res: reply
+    }
+    for(let i in steps) {
+      await steps[i](context)
     }
     reply('OK')
   }
@@ -20,7 +29,7 @@ function createPipeline (pipeline) {
 function prepareSteps(pipeline) {
   let steps = []
   for (let property in pipeline) {
-    if (pipeline.hasOwnProperty(property)) {
+    if (pipeline.hasOwnProperty(property) && property !== 'declarations') {
       steps.push(createStep(property, pipeline[property]))
     }
   }

@@ -5,8 +5,8 @@ export {
 
 // Invoke
 
-function create(opt) {
-  return (request, reply) => {
+function create (opt) {
+  return (context) => {
     return new Promise((resolve, reject) => {
       console.log('running invoke')
       setTimeout(() => {

@@ -1,11 +1,10 @@
 {
   "name": "SalesOrder.Create",
   "description": "Service to create a Sales Order on My-ERP",
-  "declarations": ["logger", "salesOrderCreateRequest"],
   "methods": ["GET"],
   "path": "/salesOrder",
   "pipeline": {
-
+    "declarations": ["logger", "salesOrderCreateRequest"],
     "assign1": [{
       "var": "logger.serviceName",
       "value": "SalesOrderCreate"
