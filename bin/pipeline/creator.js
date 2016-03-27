@@ -10,12 +10,8 @@ function createPipeline (pipeline) {
   let steps = prepareSteps(pipeline)
 
   return async function (request, reply) {
-    let variables = {}
-    pipeline.declarations.forEach((declaration) => {
-      variables[declaration] = {}
-    })
     let context = {
-      variables: variables,
+      variables: {},
       req: request,
       res: reply
     }
