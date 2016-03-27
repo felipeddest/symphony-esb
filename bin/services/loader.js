@@ -25,8 +25,8 @@ function loadServices () {
   })
 }
 
-function serviceDefaults() {
+function serviceDefaults () {
   return {
-    "methods": ["GET", "POST", "DELETE", "PUT", "PATCH"]
+    'methods': ['GET', 'POST', 'DELETE', 'PUT', 'PATCH']
   }
 }

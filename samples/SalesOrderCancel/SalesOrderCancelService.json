@@ -3,6 +3,6 @@
   "description": "Service to cancel a Sales Order on My-ERP",
   "declarations": [],
   "path": "/salesOrder/cancel",
-  "methods": ["GET"],
+  "methods": ["POST"],
   "pipeline": {}
 }

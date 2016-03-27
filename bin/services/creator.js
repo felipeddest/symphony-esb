@@ -1,13 +1,12 @@
 
-
 import * as loader from './loader'
+import * as PipelineCreator from '../pipeline/creator'
 
 export {
   createServices
 }
 
-async function createServices(server) {
-
+async function createServices (server) {
   const services = await loader.loadServices()
 
   services.forEach((service) => {
@@ -20,9 +19,7 @@ async function createServices(server) {
       server.route({
         method: method,
         path: service.path,
-        handler: function(request, reply) {
-          reply(`Service: ${service.name} Description: ${service.description}`)
-        }
+        handler: PipelineCreator.createPipeline(service.pipeline)
       })
     })
   })

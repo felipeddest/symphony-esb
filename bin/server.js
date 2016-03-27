@@ -19,7 +19,7 @@ server.register({
   if (err) throw err
 })
 
-server.start(async function (err) {
+server.start(function (err) {
   if (err) {
     console.log(err)
     throw err

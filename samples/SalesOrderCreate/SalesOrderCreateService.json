@@ -1,7 +1,7 @@
 {
   "name": "SalesOrder.Create",
   "description": "Service to create a Sales Order on My-ERP",
-  "declarations": [{"logger": {"type": "Logger"}, "salesOrderCreateRequest": "Object"}],
+  "declarations": ["logger", "salesOrderCreateRequest"],
   "path": "/salesOrder",
   "pipeline": {
 
@@ -18,7 +18,7 @@
       "transformationFile": {"path": "./JQ/salesOrderCreateRequest.jq", "parameters": [{"salesOrder": "$req.body"}]}
     }],
 
-    "invoke": {
+    "invoke1": {
       "url": "http://my-erp/order",
       "method": "POST",
       "contentType": "application/json",
