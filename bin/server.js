@@ -1,4 +1,3 @@
-'use strict'
 
 import Hapi from 'hapi'
 import * as ServiceCreator from './services/creator'
