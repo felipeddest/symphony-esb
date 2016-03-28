@@ -14,7 +14,7 @@
     }],
 
     "invoke1": {
-      "url": "http://my-erp/order",
+      "url": "http://localhost:8080/order",
       "method": "POST",
       "contentType": "application/json",
       "body": "salesOrderCreateRequest",
@@ -22,8 +22,8 @@
     },
 
     "assign2": [{
-      "var": "res.result.salesOrderNumber",
-      "value": "$orderResponse.number"
+      "var": "res.result.salesOrderId",
+      "expression": "orderResponse.number"
     },
     {
       "var": "res.result.message",
