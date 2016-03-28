@@ -1,4 +1,4 @@
 'use strict'
 
 require('babel-register')
-require('./bin/server')
+require('./lib/server')
