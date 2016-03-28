@@ -4,21 +4,20 @@
   "methods": ["GET"],
   "path": "/salesOrder",
   "pipeline": {
-    "declarations": ["logger", "salesOrderCreateRequest"],
     "assign1": [{
       "var": "logger.serviceName",
       "value": "SalesOrderCreate"
     },
     {
       "var": "salesOrderCreateRequest",
-      "transformationFile": {"path": "./JQ/salesOrderCreateRequest.jq", "parameters": [{"salesOrder": "$req.body"}]}
+      "value": {"number": 123, "items":{"id": "1", "qtd": 2}}
     }],
 
     "invoke1": {
       "url": "http://my-erp/order",
       "method": "POST",
       "contentType": "application/json",
-      "body": "$salesOrderCreateRequest",
+      "body": "salesOrderCreateRequest",
       "outputVar": "orderResponse"
     },
 
