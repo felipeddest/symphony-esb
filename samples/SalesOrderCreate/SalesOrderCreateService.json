@@ -28,6 +28,10 @@
     {
       "var": "res.result.message",
       "value": "Order created sucessfully, without warnings."
-    }]
+    }],
+
+    "reply": {
+      "expression": "res.result"
+    }
   }
 }
