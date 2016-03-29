@@ -1,7 +1,7 @@
 {
   "name": "SalesOrder.Create",
   "description": "Service to create a Sales Order on My-ERP",
-  "methods": ["GET"],
+  "methods": ["GET", "POST"],
   "path": "/salesOrder",
   "pipeline": {
     "assign1": [{
@@ -10,7 +10,7 @@
     },
     {
       "var": "salesOrderCreateRequest",
-      "value": {"number": 123, "items":{"id": "1", "qtd": 2}}
+      "expression": "req.payload"
     }],
 
     "invoke1": {
