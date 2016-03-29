@@ -16,7 +16,7 @@
     "invoke1": {
       "url": "http://localhost:8080/order",
       "method": "POST",
-      "contentType": "application/json",
+      "json": "true",
       "body": "salesOrderCreateRequest",
       "outputVar": "orderResponse"
     },
@@ -31,7 +31,7 @@
     }],
 
     "reply": {
-      "expression": "res.result"
+      "expression": "res"
     }
   }
 }
