@@ -11,7 +11,7 @@ The main objective is offer the basic funcionalities of a ESB maintaining the fo
 
 The planned funcionalities are:
 
-- Data transforming (JSONiq e XQuery)
+- Data transforming
 
 - Orquestration based on BPEL
 
