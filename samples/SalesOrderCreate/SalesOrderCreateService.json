@@ -10,7 +10,7 @@
     },
     {
       "var": "salesOrderCreateRequest",
-      "expression": "req.payload"
+      "transformationFile": {"path":"salesOrderCreateRequest_transformation.js", "input": "req.payload"}
     }],
 
     "invoke1": {
