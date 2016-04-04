@@ -1,0 +1,10 @@
+
+- JSONiq
+
+- XQuery
+
+- API do barramento
+
+- front-end do barramento
+
+- Validação do JSON

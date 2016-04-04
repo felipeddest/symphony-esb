@@ -21,6 +21,7 @@
   "dependencies": {
     "hapi": "^13.2.1",
     "hapi-router": "^3.4.1",
+    "jsoniq": "0.0.8",
     "lodash": "^4.6.1",
     "needle": "^1.0.0",
     "node-dir": "^0.1.11"
