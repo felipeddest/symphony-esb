@@ -1,8 +1,7 @@
-
 export default [{
   method: 'GET',
   path: '/',
-  handler: function (request, reply) {
+  handler:  (request, reply) => {
     reply('Symphony ESB is ready!')
   }
 }]
