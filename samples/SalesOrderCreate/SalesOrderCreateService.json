@@ -10,7 +10,7 @@
     },
     {
       "var": "salesOrderCreateRequest",
-      "transformationFile": {"path":"salesOrderCreateRequest_transformation.js", "input": "req.payload"}
+      "transformationFile": {"path":"salesOrderCreateRequest_transformation.js", "input": [{"expression": "req.payload"}, {"value": {"token": "01rf4-0o8hs-34fs2-we124"}}]}
     }],
 
     "invoke1": {
